@@ -1,0 +1,293 @@
+/* Reset margin and padding for the body and the nav */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Style for the navbar */
+.navbar {
+  position: fixed;
+    background-image: linear-gradient(to right, #fc160e, #1e47e8); /* Gradient from left to right */
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Style the navbar links */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 25px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.navbar ul li a:hover {
+    background-color: rgba(255, 48, 48, 0.3);
+}
+/* Home section styling */
+.home-section {
+    height: 90vh;
+    background-color: #f4f4f4; /* Light background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  
+  /* Container for content */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Company Name Styling */
+  .company-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333; /* Dark color */
+    margin-bottom: 20px;
+  }
+  
+  /* Tagline styling */
+  .tagline {
+    font-size: 24px;
+    color: #777; /* Lighter color for the tagline */
+  } 
+/* Section styling */
+.content-section {
+    display: flex;               /* Use Flexbox for side-by-side layout */
+    justify-content: space-between; /* Space out the text and image */
+    align-items: center;         /* Align items vertically to the center */
+    padding: 40px;               /* Add padding to the section */
+    background-color: #f4f4f4;   /* Light background color */
+}
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;          /* Vertically center the content */
+    align-items: center;              /* Horizontally center the content */
+    height: 150vh;                    /* Full viewport height */
+    padding: 40px;                    /* Add padding inside the section */
+    text-align: center;               /* Center the text inside */
+    background-color: #e3e3e3;       /* Light gray background */
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+/* Styling for the About Us heading */
+.about-us h1 {
+    font-size: 3rem;                  /* Larger font size for the heading */
+    font-weight: 700;                 /* Make it bold */
+    color: #333;                      /* Dark color for the heading */
+    margin-bottom: 20px;              /* Add space below the heading */
+}
+
+/* Styling for the About Us paragraph */
+.about-us p {
+    font-size: 1.25rem;               /* Medium font size for the paragraph */
+    color: #555;                      /* Slightly lighter gray color for the text */
+    max-width: 800px;                 /* Limit paragraph width for readability */
+    margin: 0 auto;                   /* Center the paragraph horizontally */
+    line-height: 1.8;                 /* Adjust line height for better readability */
+}
+/* Container for the services section */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Flexbox for arranging service boxes in a row */
+  .services-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Style for each service box */
+  .service-box {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%; /* Adjust to fit 4 boxes in a row */
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  /* Service box title */
+  .service-box h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Service box description */
+  .service-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  .service-box button{
+    border: none;
+    font-size: 14px;
+    color: #666;
+    background-color: white;
+  }
+  .service-box button:hover{
+    background-color: #ebc5b3;
+  }
+  
+  /* Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .service-box {
+      width: 48%; /* Two boxes per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-box {
+      width: 100%; /* One box per row on very small screens */
+    }
+  }
+  /* For small devices (phones) */
+@media (max-width: 600px) {
+  nav {
+      flex-direction: column; /* Stack navigation items vertically */
+  }
+  .services {
+      flex-direction: column; /* Stack services vertically */
+  }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .services {
+      flex-wrap: wrap; /* Allow wrapping on medium screens */
+  }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 1025px) {
+  .services {
+      flex-direction: row; /* Align services side-by-side */
+  }
+}
+/*
+.image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.image-container img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.image-containertwo {
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+
+}
+
+.image-containertwo img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  animation: rotate 7s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+.section-contactus{
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Adjust to fit 4 boxes in a row */
+  box-sizing: border-box;
+  text-align: left;
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+input, textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+.styled-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.styled-button:hover {
+  background: linear-gradient(90deg, #388e3c, #66bb6a);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.styled-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
