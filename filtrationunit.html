@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="filtrationunit.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <section class="first">
+        <h1>Filtration Unit</h1>
+        <div class="side-by-side">
+            <div class="text">
+        <p>
+            At BM Hydromech, we specialize in manufacturing custom oil filtration units tailored to meet the unique requirements of our clients. Whether you need filtration systems for hydraulic oil, lubricating oil, transformer oil, or industrial fluids, we design and build solutions that ensure maximum efficiency and reliability. Our expert engineering team works closely with customers to develop high-performance filtration systems with advanced features such as multi-stage filtration.
+        </p>  
+         <p>
+            With a commitment to quality, durability, and innovation, we provide custom-built filtration solutions for industries like power plants, manufacturing, automotive, and heavy machinery. No matter the capacity, flow rate, or contamination level, BMHYDROMECH delivers efficient, cost-effective, and high-quality filtration units to enhance equipment performance and longevity. Contact us today to get a bespoke filtration solution designed for your specific needs.  
+        </p>
+        </div>
+        <div class="image">
+            <img src="sec.png" alt="Hydraulic System">
+        </div>
+    </div>
+    </section>
+    <section class="photoslider">
+        <div class="slider">
+            <div class="slides">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <img src="image1.jpg" alt="Image 1">
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img src="image2.jpg" alt="Image 2">
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img src="image3.jpg" alt="Image 3">
+              </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </div>
+    </section>
+    <script>
+        let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  // Wrap around the slides
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  // Shift the slides
+  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Auto-slide (optional)
+setInterval(() => {
+  nextSlide();
+}, 5000); // Change slide every 5 seconds
+
+    </script>
+     <footer>
+        <p>&copy; 2025 BM Hydromech. All rights reserved.</p>
+        <p></p>
+    </footer>
+    </body>
+</html>
